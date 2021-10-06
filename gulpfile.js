@@ -139,4 +139,4 @@ export default gulp.series(
     ),
 );
 
-ghpages.publish('gulp');
+ghpages.publish('dist');
