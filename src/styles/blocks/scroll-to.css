@@ -1,0 +1,20 @@
+.scroll-to {
+    display: block;
+    padding-bottom: 11px;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    background-image: url("data:image/svg+xml,%3Csvg width='23' height='11' viewBox='0 0 23 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.3814 1.4458H1.12695L11.1408 9.61492L21.3814 1.4458Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 23px 11px;
+    transition: opacity 0.2s ease;
+}
+
+.scroll-to:hover {
+    opacity: 0.8;
+}

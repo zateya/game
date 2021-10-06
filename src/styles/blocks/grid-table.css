@@ -1,0 +1,36 @@
+.grid-table {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-table__item {
+    flex-grow: 1;
+    width: 50%;
+    margin: 0;
+    padding: 10px;
+    border-top: 1px solid rgba(151, 151, 151, 0.3);
+}
+
+.grid-table__item:not(:nth-of-type(2n)) {
+    border-right: 1px solid rgba(151, 151, 151, 0.3);
+}
+
+.grid-table__item:last-of-type {
+    border-right: 0;
+}
+
+@media (min-width: 768px) {
+    .grid-table__item {
+        padding: 15px;
+        min-height: 126px;
+    }
+}
+
+.grid-table__description {
+    margin: 0;
+}
+
+.grid-table__title {
+    margin-bottom: 15px;
+    color: #FFB548;
+}

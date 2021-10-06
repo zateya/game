@@ -1,0 +1,121 @@
+.accordion {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.accordion__item {
+    position: relative;
+    padding-left: 23px;
+}
+
+@media (min-width: 768px) {
+    .accordion__item {
+        padding-left: 46px;
+    }
+}
+
+.accordion__item:not(:last-child) {
+    padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .accordion__item:not(:last-child) {
+        padding-bottom: 40px;
+    }
+}
+
+.accordion__item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 6px;
+    width: 2px;
+    height: 0;
+    background-color: #ffffff;
+    transition: height 0.2s ease-in-out;
+}
+
+.accordion__item_highlight:not(:last-child)::before {
+    height: calc(100% - 14px);
+}
+
+.accordion__title {
+    margin: 0;  
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 400;
+    font-family: Bebas Neue;
+    letter-spacing: 2px;
+    color: #FFB548;
+}
+
+@media (min-width: 768px)  {
+    .accordion__title {
+        font-size: 36px;
+        line-height: 36px;
+    }
+}
+
+.accordion__description {
+    margin-top: 18px;
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .accordion__description {
+        margin-top: 8px;
+    }
+}
+
+.accordion__description[aria-hidden=true] {
+    display: none;
+}
+
+.accordion__toggle {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    text-align: left;
+    transition: color 0.2s ease;
+    cursor: pointer;
+    outline: none;
+}
+
+.accordion__toggle:hover {
+    color: #ffffff;
+}
+
+.accordion__toggle::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+@media (min-width: 768px) {
+    .accordion__toggle::before {
+        top: 6px;
+    }
+}
+
+.accordion__toggle[aria-expanded=true]::before,
+.accordion__toggle:hover::before {
+    background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+    .accordion__item_highlight::before {
+        top: 20px;
+    }
+}
+

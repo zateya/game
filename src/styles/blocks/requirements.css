@@ -1,0 +1,43 @@
+.requirements {
+    min-height: 100vh;
+    padding-top: 70px;
+    padding-bottom: 260px;
+    background-color: #0B0B03;
+    background-image: url(../images/bg-image-requirements_m.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: auto 100%;
+}
+
+@media (max-width: 991px) {
+    .requirements {
+        min-height: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .requirements {
+        padding-top: 145px;
+        padding-bottom: 170px;
+        background-image: url(../images/bg-image-requirements.jpg);
+        background-position: right bottom;
+    }
+}
+
+.requirements__heading {
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .requirements__heading {
+        margin-bottom: 10.83%;
+    }
+}
+
+@media (min-width: 992px) {
+    .requirements__table {
+        width: calc(50% - 30px);
+    }
+}
+

@@ -1,0 +1,14 @@
+.heading__question {
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+@media (min-width: 870px) {
+    .heading__question {
+        margin-bottom: 10px;
+    }
+}
+
+.heading__title {
+    margin: 0;
+}

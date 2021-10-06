@@ -1,0 +1,146 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 10px;
+    z-index: 10;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.header_highlight::before {
+   opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding-top: 20px;
+    }
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    width: 33px;
+    height: 33px;
+}
+
+@media (min-width: 768px) {
+    .header__logo {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+.header__logo-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 869px) {
+    .header__nav {
+        display: none;
+    }
+}
+
+.header__extra {
+    display: flex;
+    align-items: center;
+}
+
+.header__lang {
+    position: relative;
+    padding-right: 11px;
+    margin-right: 15px;
+}
+
+@media (min-width: 870px) {
+    .header__lang {
+        padding-right: 18px;
+        margin-right: 25px;
+    }
+}
+
+.header__lang::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 0;
+    width: 1px;
+    height: 30px;
+    background-color: #ffffff;
+    opacity: 0.5;
+}
+
+.header__platforms {
+    display: flex;
+}
+
+.header__platform {
+    width: 31px;
+    height: 31px;
+}
+
+.header__platform:not(:last-child) {
+    margin-right: 18px;
+}
+
+.header__platform-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #FFB548;
+    transition: fill 0.2s ease;
+}
+
+.header__platform:hover .header__platform-img,
+.header__platform:focus .header__platform-img {
+    fill: #FFCC48;
+}
+
+@media (max-width: 869px) {
+    .header__platforms {
+        display: none;
+    }
+}
+
+.header__menu-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.header__menu-icon {
+    width: 25px;
+    height: 18px;
+    fill: #ffffff;
+}
+
+@media (min-width: 870px) {
+    .header__menu-toggle {
+        display: none;
+    }
+}
